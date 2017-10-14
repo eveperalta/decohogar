@@ -20,24 +20,31 @@ jQuery(function($) {'use strict',
 	//Initiat WOW JS
 	new WOW().init();
 
-	//Contact form
-	var form = $('#contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-					type:"POST",
-                    url:"email.php",
-                    data: $("#contact").serialize(),
-                    success:function(result)
-                }
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">' + data.message + '</p>').delay(3000).fadeOut();
-		});
-	});
+	// --------------Contact Form Ajax request-----------------------
+
+    $('.form-group').on('submit', function(event){
+    event.preventDefault();
+
+    $this = $(this);
+
+    var data = {
+      first_name: $('#first_name').val(),
+      last_name: $('#last_name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "email.php",
+      data: data,
+      success: function(msg){
+	     $('.contact-success').fadeIn().delay(3000).fadeOut();
+      }
+    });
+  });
+
+});
 	
 	//goto top
 	$('.gototop').click(function(event) {
@@ -49,7 +56,8 @@ jQuery(function($) {'use strict',
 
 
 //shut down menu
-$('.navbar-collapse ul li a').click(function() {
+$(
+ '.navbar-collapse ul li a').click(function() {
          $('.navbar-collapse').collapse('hide');
  })
 
