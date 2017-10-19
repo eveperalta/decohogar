@@ -1,11 +1,5 @@
 jQuery(function($) {'use strict',
 
-	//#main-slider
-	$(function(){
-		$('#main-slider.carousel').carousel({
-			interval: 8000
-		});
-	});
 
 
 	// accordian
@@ -94,4 +88,19 @@ return false;
  
 })
  
+});
+ gtag('set', {'user_id': 'USER_ID'}); // Establezca el ID de usuario mediante el user_id con el que haya iniciado sesión.
+
+ 
+// Activate Carousel
+$("#myCarousel").carousel();
+
+// Enable Carousel Indicators
+$(".item").click(function(){
+    $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function(){
+    $("#myCarousel").carousel("prev");
 });
