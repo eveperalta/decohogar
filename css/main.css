@@ -22,9 +22,9 @@ body {
 
 .titulo{
   color: #F3AF22;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 20px;
   margin-top: 60px;
   text-align: center;
 }
@@ -85,14 +85,16 @@ z-index: 100;
 }
 
 .item{
-  width: 100% !important;
-  height: 350px !important;
-  margin-top: 100px !important;
+  width: auto !important;
+  height: auto !important;
+  margin-top: 40px !important;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-      width: 60%;
-      margin: auto;
+      width: auto;
+      margin: 0px;
+      display: block;
+      height: auto;
   }
 .foto{
   margin-bottom: -35px;
@@ -318,10 +320,10 @@ input.search-form:hover {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin: 0;
   border-radius: 3px;
-  color: #fff;
+  color: #000;
   line-height: 20px;
   display: inline-block;
 }
@@ -338,7 +340,7 @@ input.search-form:hover {
 .navbar-inverse .navbar-brand {
   font-size: 30px;
   line-height: 40px;
-  color: #fff;
+  color: #DBD7D7;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
@@ -371,7 +373,7 @@ input.search-form:hover {
 
 .navbar-inverse .navbar-nav .dropdown-menu > li > a {
   padding: 8px 15px;
-  color: #fff;
+  color: #DCD9D9;
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
@@ -393,6 +395,7 @@ input.search-form:hover {
 .navbar-inverse .navbar-form {
   border-top: 0;
   padding-bottom: 0;
+  background: #fff;
 }
 
 
@@ -1093,11 +1096,11 @@ a.accordion-toggle  i{
 }
 
 #carousel-slider .carousel-control.left i {
-  left:-25px
+  left:-5px
 }
 
 #carousel-slider .carousel-control.right i {
-  right: -25px;
+  right: -5px;
 }
 
 #carousel-slider
