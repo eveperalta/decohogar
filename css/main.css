@@ -4,7 +4,10 @@
 /*************************
 *******Typography******
 **************************/
-
+.logo{
+  width: 70px;
+  height: 50px;
+}
 .boton{
   color: #fff;
 }
@@ -475,7 +478,7 @@ input.search-form:hover {
 #main-slider .next {
   position: absolute;
   top: 50%;
-  background-color: #c52d2f;
+  background-color: ;
   color: #fff;
   display: inline-block;
   margin-top: -25px;
@@ -1107,7 +1110,7 @@ a.accordion-toggle  i{
 .carousel-control.left, 
 #carousel-slider
 .carousel-control.right {
-  background: none;
+  background: none !important;
 }
 
 .skill_text {
